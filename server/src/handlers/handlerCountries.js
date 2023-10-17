@@ -4,7 +4,7 @@ const {getPais, getAllController, getPaises}= require("../controllers/getCountri
 
 const getCountriesHandler =async(req, res)=>{
    const { nombre } = req.query;
-   console.log(nombre)
+   
     if(nombre){
         const resName = await getPais(nombre)
         res.status(200).json(resName)
@@ -23,7 +23,7 @@ const IdHandler = async (req, res)=>{
  
 try{
     const countryId =await getAllController(idPais) 
-    console.log(countryId)
+    // console.log(countryId)
     res.status(200).json(countryId)
 
  }catch(error){
