@@ -23,23 +23,17 @@ const rootReducer =(state=initialState,action)=>{
         case STATE_PAIS:
             return {...state, country:action.payload}
 
-        case FILTER:
-            return {...state, filterCountries: action.payload}
-         
         case ORDER:
-            const countryByName= [...state.countries]
-               console.log(countryByName)  
+            console.log(action.payload, "en order")
+            return {...state,orderCountries : action.payload}
+         
+        case FILTER:
+            const countryByName= action.payload
+         
+          
             return {
                 ...state,
-                countries: countryByName.sort((a,b)=>{
-                    if(action.payload==="Ascendent"){
-                        return b.name.localcompare(a.name)
-                    }else if(action.payload==="Descendent"){
-                        return a.name===localcompare(b.name)
-                    }
-                    console.log(countryByName)
-                return countryByName;
-                })
+                countries: countryByName
             }
 
         default:

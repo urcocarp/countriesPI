@@ -46,18 +46,20 @@ export const statePais = () => {
     return async function (dispatch){
         const {data}=await axios.get(`http://localhost:3001/countries?nombre=${name}`)
         console.log(data)
-        dispatch({type:ORDER, payload:data})
+        dispatch({type:FILTER, payload:data})
     
     }
 }
 
-export const orderCountry = (id) => {
-    return function () {
-        const country = axios.get(`http://localhost:3001/countries/${id}`);
-        const oderId = country.data
+export const orderContinent = (continent) => {
+   return function(dispatch){
 
-        dispatch({ type: ORDER, payload: oderId })
+       console.log(continent, "en action")
+       dispatch({type:ORDER, payload:continent})
+
+   }
+     
     }
-}
+
 
 

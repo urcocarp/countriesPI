@@ -3,9 +3,9 @@
     border-radius: 10px ;
     justify-content: center;
     border-top: 3px;
-    width: fit-content;
     height: fit-content;
     flex-direction:column;
-    display: flex;
+    display: grid;
     margin: 4px;
+    align-items: center;
 }
