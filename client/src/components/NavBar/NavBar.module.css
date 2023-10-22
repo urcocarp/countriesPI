@@ -2,5 +2,20 @@
     background-color: white;
     margin-block-start: 1px;
     border-radius: 15px;
-    border: 1px solid red
+    border: 1px solid red;
+    display: flex;
+    justify-content: space-between;
+
+
+}
+.imput{
+    position: relative;
+    /* right: 50%; */
+    width: 18rem;
+    background-color:white;
+    border-radius: 0.5rem;
+    border: none;
+    font-weight: 600;
+    padding: 0px 12px 0 38px;
+    
 }

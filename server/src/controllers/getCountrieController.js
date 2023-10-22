@@ -14,8 +14,22 @@ const resCountrie = await Country.findAll(
         }
     }
     )
+    const apiCountry= resCountrie.map((country)=>{
+        return {
+            id: country.id,
+            name:country.name,
+            flags: country.flags,
+            population: country.population,
+            area: country.area,
+            continets: country.continets,
+            subregion: country.subregion,
+            capital: country.capital
+
+
+        }
+    })
     // console.log(typeof resCountrie)
-  return resCountrie
+  return apiCountry
 }
 
 const getAllController= async(idPais)=>{

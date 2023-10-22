@@ -4,15 +4,25 @@ const {getPais, getAllController, getPaises}= require("../controllers/getCountri
 
 const getCountriesHandler =async(req, res)=>{
    const { nombre } = req.query;
-   
-    if(nombre){
-        const resName = await getPais(nombre)
-        res.status(200).json(resName)
-    }else{
-        const name =await getPaises();
-        // console.log(name)
-        res.status(200).json(name)
-    }
+   console.log(req.query)
+try{
+
+    const resName= nombre?await getPais(nombre): await getPaises()
+    console.log(resName)
+    res.status(200).json(resName)
+}
+catch(error){
+    res.status(404).json({error:error.messenge})
+}
+
+    // if(nombre){
+    //     const resName = await getPais(nombre)
+    //     res.status(200).json(resName)
+    // }else{
+    //     const name =await getPaises();
+    //     // console.log(name)
+    //     res.status(200).json(name)
+    // }
 };
 
 const IdHandler = async (req, res)=>{

@@ -1,0 +1,11 @@
+.detail{
+    border: 1px solid red;
+    border-radius: 10px ;
+    justify-content: center;
+    border-top: 3px;
+    width: fit-content;
+    height: fit-content;
+    flex-direction:column;
+    display: flex;
+    margin: 4px;
+}

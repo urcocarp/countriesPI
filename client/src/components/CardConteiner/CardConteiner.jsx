@@ -7,7 +7,7 @@ import { useSelector } from "react-redux"
 const CardConteiner = ()=>{
 
 
-  const users = useSelector((state) => state.country);
+  const users = useSelector((state) => state.countries);
 
 
     return (
