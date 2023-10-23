@@ -1,11 +1,22 @@
 .detail{
-    border: 1px solid red;
+    border: 3px solid rgb(10, 10, 10);
     border-radius: 10px ;
     justify-content: center;
-    border-top: 3px;
+    border-top: 5px;
     height: fit-content;
+    width: fit-content;
     flex-direction:column;
-    display: grid;
-    margin: 4px;
+    display: flex;
+    margin-top: 10%;
+    margin-left: 30%;
+    margin-right: 20%;
     align-items: center;
+    position: absolute;
+
+}
+
+.bandera{
+    border: 1px solid black;
+    border-radius:10px 100px /120px 100px
+
 }

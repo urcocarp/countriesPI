@@ -32,7 +32,7 @@ const Detail = () => {
     return (
         <div className={style.detail}>
 
-            <img src={countries.flags} />
+            <img className={style.bandera}src={countries.flags} />
             <p>pais:{countries.name}</p>
             <p>id:{countries.id}</p>
             <p>continents:{countries.continents}</p>

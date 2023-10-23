@@ -29,7 +29,7 @@ const Home = ()=>{
         
           <select onChange={filterbyContinent}>
           <option>Continente</option>
-          <option value="South America">America</option>
+          <option value="South America">South America</option>
           <option value="North America">North America</option>
           <option value="Europe">Europa</option>
           <option value="Africa">Africa</option>

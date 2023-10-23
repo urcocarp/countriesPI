@@ -1,10 +1,17 @@
 .main{
-    background-color: white;
-    margin-block-start: 1px;
-    border-radius: 15px;
-    border: 1px solid red;
+    position: fixed;
+    top:0;
+    left: 0;
+    width: 100%;
+    padding: 17px 50px;
+    background: rgba(0, 0, 0, 0.116);
     display: flex;
     justify-content: space-between;
+    gap: center;
+    margin-bottom: 0%;
+    background-image: url('https://img.freepik.com/premium-vector/dirty-old-world-map_1102-368.jpg');
+
+
 
 
 }
@@ -12,10 +19,15 @@
     position: relative;
     /* right: 50%; */
     width: 18rem;
-    background-color:white;
+    background-color:white ;
     border-radius: 0.5rem;
-    border: none;
+    border: 1px solid red violet green blue ;
     font-weight: 600;
     padding: 0px 12px 0 38px;
-    
+    /* margin-left: 20px; */
+    margin-right: 10px;
+}
+.button{
+    margin-left: 10px;
+    margin-right: 80px;
 }

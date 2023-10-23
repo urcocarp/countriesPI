@@ -1,6 +1,7 @@
 .conteiner{
-    color:blueviolet;
+    color:rgb(18, 17, 19);
     border: 1px solid red;
+    border-top:3px;
     border-radius: 15px;
     width: fit-content;
     height: fit-content;
@@ -9,5 +10,6 @@
     flex-wrap: wrap;
     gap: 1em;
     display: flex;
+    
     
 }

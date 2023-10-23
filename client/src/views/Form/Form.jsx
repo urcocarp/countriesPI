@@ -18,7 +18,7 @@ const Form = ()=>{
  const countriesName= useSelector(state=> state.countries)
 
 
- const [form, setForm] = useState({name:"", difficulty:"", duration:"", season: ""})
+ const [form, setForm] = useState({name:"", difficulty:1, duration:"", season: ""})
  
  const handlerChange= (event)=>{
     event.preventDefault()
@@ -58,7 +58,7 @@ const Form = ()=>{
             <label>name</label>
             <input type="text" value={form.name} name="name" onChange={handlerChange}/>
             <label>difficulty</label>
-            <input type="text"value={form.difficulty} name="difficulty" onChange={handlerChange}/>
+            <input type="number"min={1}max={5} value={form.difficulty} name="difficulty" onChange={handlerChange}/>
             <label>duration</label>
             <input type="text" value={form.duration} name="duration" onChange={handlerChange}/>
             <label>season</label>

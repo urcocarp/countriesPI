@@ -4,6 +4,11 @@
     width: fit-content;
     height: fit-content;
     padding: 50px;
+    background-image: ('https://img.freepik.com/premium-vector/dirty-old-world-map_1102-368.jpg');
     
     
+}
+.flag{
+    border-radius: 32px 64px;
+    border: 1px solid black
 }
