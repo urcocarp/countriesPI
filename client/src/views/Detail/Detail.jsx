@@ -35,7 +35,7 @@ const Detail = () => {
             <img src={countries.flags} />
             <p>pais:{countries.name}</p>
             <p>id:{countries.id}</p>
-            <p>continent:{countries.continent}</p>
+            <p>continents:{countries.continents}</p>
             <p>capital:{countries.capital}</p>
             <p>subregion:{countries.subregion}</p>
             <p>area:{countries.area}</p>

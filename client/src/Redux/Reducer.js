@@ -1,4 +1,4 @@
-import {  GET_COUNTRIES, GET_ID, STATE_PAIS,FILTER, ORDER } from "./Actions";
+import {  GET_COUNTRIES, GET_ID, STATE_PAIS,FILTER, ORDER, CREATEACTIVITIES } from "./Actions";
 
 
 const initialState={
@@ -7,15 +7,18 @@ const initialState={
     getDetail:[],
     filterCountries:[],
     orderCountries: [],
-    
+    countries2:[],
+ 
 }
 
 
 const rootReducer =(state=initialState,action)=>{
     switch(action.type){
         case GET_COUNTRIES :
-            return {...state, countries: action.payload}
+            return {...state, countries: action.payload, countries2: action.payload, 
+               }
 
+        
 
         case GET_ID:
             return {...state, getDetail:action.payload}
@@ -25,7 +28,14 @@ const rootReducer =(state=initialState,action)=>{
 
         case ORDER:
             console.log(action.payload, "en order")
-            return {...state,orderCountries : action.payload}
+
+            const result= state.countries2.filter(i=> i.continents===action.payload)
+
+            console.log(result)
+
+            return {...state, countries:result }
+
+
          
         case FILTER:
             const countryByName= action.payload
@@ -35,6 +45,8 @@ const rootReducer =(state=initialState,action)=>{
                 ...state,
                 countries: countryByName
             }
+        case CREATEACTIVITIES:
+            return{...state}
 
         default:
             return{...state};

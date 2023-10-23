@@ -11,27 +11,35 @@ const Home = ()=>{
 
     useEffect(()=>{
         dispatch(getCountry())
+    
     },[])
 
     const filterbyContinent =(event)=>{
+       
        event.preventDefault()
        const continent= event.target.value
-       orderContinent(continent)
+       dispatch (orderContinent(continent))
       
     }
     return (
         <>
         
         <h1>esto es home</h1>
+
+        
           <select onChange={filterbyContinent}>
           <option>Continente</option>
-          <option value="America">America</option>
-          <option value="Europa">Europa</option>
+          <option value="South America">America</option>
+          <option value="North America">North America</option>
+          <option value="Europe">Europa</option>
           <option value="Africa">Africa</option>
           <option value="Asia">Asia</option>
+          <option value="Antarctica">Antarctica</option>
           <option value="Oceania">Oceania</option> 
 
           </select>
+
+
           <CardConteiner/>
         
         </>

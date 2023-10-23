@@ -1,12 +1,12 @@
 import axios from "axios";
 
 
-
 export const GET_COUNTRIES = "GET_COUNTRIES"
 export const GET_ID = "GET_ID"
 export const STATE_PAIS = "STATE_PAIS"
-export const ORDER = "OREDER"
+export const ORDER = "ORDER"
 export const FILTER = "FILTER"
+export const CREATEACTIVITIES ="CREATEACTIVITIES"
 
 
 export const getCountry = () => {
@@ -52,14 +52,24 @@ export const statePais = () => {
 }
 
 export const orderContinent = (continent) => {
-   return function(dispatch){
 
-       console.log(continent, "en action")
-       dispatch({type:ORDER, payload:continent})
+    console.log(continent, "en action")
 
-   }
+   return{type:ORDER, payload:continent}
+ 
+}
+export const createActivity = (activity)=>{
+
+    return async function (dispatch){
+        const {data}=await axios.post(`http://localhost:3001/activities`, activity)
+        console.log(data)
+        dispatch({type:CREATEACTIVITIES, payload:data})
+  }
+      
+}
+   
      
-    }
+    
 
 
 
