@@ -4,8 +4,9 @@
   font-weight: 400;
 
   color-scheme: light dark;
-  color: rgba(17, 16, 16, 0.87);
-  background-color: #d8c9c9;
+  color: rgba(17, 16, 16, 0.733);
+  background-color: #22194b;
+  background-image: url("https://worldbusiness.org/wp-content/uploads/2012/10/Globe-digital.jpg");
 
   font-synthesis: none;
   text-rendering: optimizeLegibility;
@@ -16,7 +17,7 @@
 
 a {
   font-weight: 500;
-  color: #111111 ;
+  color:#000000e3 ;
   text-decoration: inherit;
 }
 a:hover {

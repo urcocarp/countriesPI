@@ -1,14 +1,24 @@
 .card{
-    border: 1px solid red;
+    border: 1px solid rgb(92, 80, 80);
+    background-image: url('https://img.freepik.com/premium-vector/dirty-old-world-map_1102-368.jpg');
     border-radius: 15px;
-    width: fit-content;
-    height: fit-content;
-    padding: 50px;
-    background-image: ('https://img.freepik.com/premium-vector/dirty-old-world-map_1102-368.jpg');
-    
+    width: 60%;
+    height: 280px;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    padding: 20px;
+    background-color: rgba(44, 46, 45, 0.705);
+    box-shadow: rgba(50, 50, 93, 0.25) 0px 30px 60px -12px inset, rgba(0, 0, 0, 0.3) 0px 18px 36px -18px inset;
     
 }
 .flag{
     border-radius: 32px 64px;
-    border: 1px solid black
+    border: 1px solid rgb(236, 236, 236);
+    width:auto;
+    height: 100px;
+    margin:0 auto;
+ 
+    box-shadow: rgba(50, 50, 93, 0.25) 0px 30px 60px -12px inset, rgba(3, 3, 3, 0.3) 0px 18px 36px -18px inset;
 }
+

@@ -11,10 +11,10 @@ const {Country} = require("./src/db.js")
 
 
 
-conn.sync({ force:true }).then(async() => {
+conn.sync({ force: false}).then(async() => {
   try {
   const countries = await getCountries();
-  await Country.bulkCreate(countries)
+  await Country.bulkCreate(countries) 
 // console.log(countries)
 
 } catch (error) {

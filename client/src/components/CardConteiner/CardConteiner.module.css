@@ -1,15 +1,39 @@
 .conteiner{
     color:rgb(18, 17, 19);
-    border: 1px solid red;
+    border: 1px solid rgb(129, 121, 121);
     border-top:3px;
     border-radius: 15px;
     width: fit-content;
     height: fit-content;
-    flex-direction: row;
-    justify-content: center;
-    flex-wrap: wrap;
-    gap: 1em;
-    display: flex;
+    background-image: url("https://worldbusiness.org/wp-content/uploads/2012/10/Globe-digital.jpg");
+    align-items: center;
     
     
 }
+.paisesactuales{
+    
+    display:grid;
+    grid-template-columns: repeat(3,1fr);
+    margin-left: 4px;
+    gap: 4px ;
+    flex-wrap: wrap;
+   
+}
+.tittle{
+    /* text-align: center; */
+    color:rgba(243, 239, 239, 0.24);
+    font-family: Inter, system-ui, Avenir, Helvetica, Arial, sans-serif;
+    margin-left: 30px;
+    text-transform: uppercase;
+    width: 100%;
+    font-size: 80px;
+    font-weight: bold;
+
+    /* background-image: url('https://img.freepik.com/premium-vector/dirty-old-world-map_1102-368.jpg'); */
+    /* background-size:cover ; */
+    background-position-y:center;
+    background-clip: text;
+    
+    -webkit-background-clip: text;
+}
+

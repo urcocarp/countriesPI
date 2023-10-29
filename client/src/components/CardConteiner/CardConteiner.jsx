@@ -1,10 +1,11 @@
 import style from './CardConteiner.module.css'
 import Card from '../Card/Card'
 import { useSelector } from "react-redux"
+import Paginado from '../Paginado/Paginado'
 
 
 
-const CardConteiner = ()=>{
+const CardConteiner = ({actualPage,total,paginaanterior,proximapagina,paisesactuales,countriesxpage,paginado,prev,next})=>{
 
 
   const users = useSelector((state) => state.countries);
@@ -13,7 +14,10 @@ const CardConteiner = ()=>{
     return (
         
         <div className={style.conteiner}>
-          {users.map(user=>{
+          <h1 className={style.tittle}>Home</h1>
+          <hr></hr>
+          <div className={style.paisesactuales}>
+          {paisesactuales.map(user=>{
             return <Card
               key={user.id}
               id={user.id}
@@ -23,6 +27,17 @@ const CardConteiner = ()=>{
               population={user.population}
             />
           })}
+         
+          </div>
+          <Paginado 
+                 actualPage={actualPage}
+                 total={total}
+                 countriesxpage={countriesxpage} paginado={paginado}
+                 prev={prev}
+                 next={next}
+                 />
+
+
 
         </div>
     )

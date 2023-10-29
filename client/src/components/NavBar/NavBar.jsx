@@ -34,13 +34,14 @@ const searchHandler=(event)=>{
 
         <div className={style.main}>
            <Link to= '/home'>Home</Link>
-           <Link to= '/form'>Form</Link>
+           <Link to= '/form'>Create</Link>
+           <Link to='./'>Quit</Link>
            <input 
            type= "text"
            className={style.imput}
            onChange={HandlerInput}
            onSubmit={searchHandler}
-           placeholder={`Search ${country.length} countries`}
+           placeholder={`Search countries`}
 
            ></input>
            <button className={style.button} onClick={searchHandler}>search</button>
@@ -48,4 +49,8 @@ const searchHandler=(event)=>{
     )
     
 };
+
+
+
+
 export default NavBar;

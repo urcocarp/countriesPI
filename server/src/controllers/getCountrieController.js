@@ -1,7 +1,7 @@
 const {Activity, Country} = require ("../db");
 const {Op} = require("sequelize");
 
-const getPaises = async()=> await Country.findAll();
+const getPaises = async()=> await Country.findAll({include:Activity});
 
 
 const getPais=async(nombre)=>{
@@ -39,7 +39,7 @@ const getAllController= async(idPais)=>{
         {
         include:{
             model:Activity,
-            attributes:["name"],
+            // attributes:["name" ],
             through:{
                 attributes:[],
             },

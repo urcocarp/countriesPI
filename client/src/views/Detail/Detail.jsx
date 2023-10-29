@@ -13,7 +13,7 @@ const Detail = () => {
 
     const dispatch = useDispatch();
     const countries = useSelector(state => state.getDetail)
-    console.log(countries.nombre)
+    // console.log(countries.nombre)
 
 
 
@@ -30,8 +30,8 @@ const Detail = () => {
     }, [dispatch, id]);
 
     return (
-        <div className={style.detail}>
-
+        <div className={style.principal}>
+         <div className={style.detail}>
             <img className={style.bandera}src={countries.flags} />
             <p>pais:{countries.name}</p>
             <p>id:{countries.id}</p>
@@ -40,13 +40,27 @@ const Detail = () => {
             <p>subregion:{countries.subregion}</p>
             <p>area:{countries.area}</p>
             <p>poblacion:{countries.population}</p>
+         </div>
+        <hr></hr>
+          <div className={style.detail} >
+                {countries?.Activities?.map((actividad, key)=>
+                 <div key={key} >
+                       
+                     <p>name: {actividad.name}</p>
+                     <p>difficulty: {actividad.difficulty}</p>
+                     <p>duration: {actividad.duration}</p>
+                     <p>season:{actividad.season}</p>
 
+                 </div>
+                )}
+            </div>
 
+         </div>
 
+                )
+            }
+    
+    
 
-        </div>
-    )
-
-}
-
+            
 export default Detail;

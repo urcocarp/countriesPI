@@ -1,0 +1,27 @@
+.landing{
+    width: 60%;
+    font-size: 100px;
+    background-color: rgba(211, 210, 210, 0.26);
+    font-weight: bold;
+    background-position: right;
+
+    background-image: url('https://img.freepik.com/premium-vector/dirty-old-world-map_1102-368.jpg');
+    background-position-y:center ;
+    background-clip: text;
+    
+    -webkit-background-clip: text;
+}
+.buttonlanding{
+    background-position: center;
+    margin-right: 10%;
+    background:rgba(65, 27, 167, 0.226);
+    cursor:pointer;
+    padding: 16px 32px;
+    border: none;
+    color:#FFF;
+    font-size: 24px;
+    font-weight: bold;
+    position: relative;
+    border-radius: 12px;
+    
+}

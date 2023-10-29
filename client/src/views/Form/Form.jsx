@@ -2,7 +2,7 @@ import style from "./Form.module.css"
 import { useState, useEffect } from "react";
 import { useSelector, useDispatch } from "react-redux";
 import { getCountry, createActivity } from "../../Redux/Actions";
-
+import { useNavigation, useNavigate } from "react-router-dom"
 
 
 
@@ -42,10 +42,13 @@ const Form = ()=>{
 
 
  }
+const navigate = useNavigate()
 
  const button =(event)=>{
+
     event.preventDefault()
     dispatch(createActivity(form))
+    navigate("/home")
     
  }
 
@@ -53,7 +56,8 @@ const Form = ()=>{
 
     return (
         <form className={style.form}>
-            <h1>esta es la vista de Form</h1>
+            <h1 className={style.formtittle}>Create</h1>
+             <div className={style.formu}>
 
             <label>name</label>
             <input type="text" value={form.name} name="name" onChange={handlerChange}/>
@@ -64,14 +68,16 @@ const Form = ()=>{
             <label>season</label>
             <input type="text" value={form.season} name="season"onChange={handlerChange}/>
 
-            <select name="countries" onChange={handlerChange}>
+             </div>
+
+            <select name="countries" onChange={handlerChange}className={style.select}>
                 <option>selecciona un pais</option>
                 {countriesName.map((i,key)=>
                 <option value={i.id} >{i.name}</option>
                 )}
             </select>
 
-            <button type="button" onClick={button}>Create</button>
+            <button type="button" onClick={button} className={style.create}>Create</button>
 
         </form>
     )

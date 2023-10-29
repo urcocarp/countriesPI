@@ -1,22 +1,40 @@
 .detail{
-    border: 3px solid rgb(10, 10, 10);
-    border-radius: 10px ;
+    border: 3px solid rgb(21, 184, 196);
+    color: rgb(0, 0, 0);
+    background-color: rgba(0, 0, 0, 0.486);
+    border-radius: 25px;
     justify-content: center;
     border-top: 5px;
-    height: fit-content;
-    width: fit-content;
-    flex-direction:column;
-    display: flex;
-    margin-top: 10%;
-    margin-left: 30%;
-    margin-right: 20%;
+    height: 70%;
+    padding: 5%;
     align-items: center;
-    position: absolute;
-
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    font-family: Inter, system-ui, Avenir, Helvetica, Arial, sans-serif;
+    margin-left: 15%; 
+    
+    background-image: url('https://img.freepik.com/premium-vector/dirty-old-world-map_1102-368.jpg');
 }
 
 .bandera{
-    border: 1px solid black;
-    border-radius:10px 100px /120px 100px
+    
+    margin-top: 10%;
+    border: 1px solid rgba(235, 230, 230, 0.904);
+    border-radius:25px 25px ;
+    width: 300px;
+    height: 200px;
+    
+   
+    
 
+}
+.principal{
+    padding-top: 80px;
+    align-items: center;
+     margin-right: 15%;
+    display: flex;
+    justify-content: center;
+    gap : 10px;
+   
 }

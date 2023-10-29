@@ -7,6 +7,10 @@ export const STATE_PAIS = "STATE_PAIS"
 export const ORDER = "ORDER"
 export const FILTER = "FILTER"
 export const CREATEACTIVITIES ="CREATEACTIVITIES"
+export const POPULATION ="POPULATION "
+export const ORDERAZ= "ORDERAZ"
+export const ACTIVITY= "ACTIVITY"
+export const ACTIVIDAD= "ACTIVIDAD"
 
 
 export const getCountry = () => {
@@ -58,6 +62,12 @@ export const orderContinent = (continent) => {
    return{type:ORDER, payload:continent}
  
 }
+export const Poulation = (population)=>{
+   console.log("poop")
+
+   return {type:POPULATION, payload: population }
+  
+}
 export const createActivity = (activity)=>{
 
     return async function (dispatch){
@@ -65,9 +75,27 @@ export const createActivity = (activity)=>{
         console.log(data)
         dispatch({type:CREATEACTIVITIES, payload:data})
   }
-      
 }
-   
+export const orderAZ=(name)=>{
+     console.log("orderName")
+    return { type:ORDERAZ, payload:name}
+    
+}
+export const activity =()=>{
+    return async function(dispatch){
+    const {data}= await axios.get(`http://localhost:3001/activities`)
+    console.log("activity")
+     dispatch ({type:ACTIVITY , payload: data})
+}
+
+
+}
+
+export const actividadPaises=(activity)=>{
+
+    return{ type:ACTIVIDAD, payload: activity }
+
+}   
      
     
 
