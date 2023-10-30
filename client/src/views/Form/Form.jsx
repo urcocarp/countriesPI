@@ -56,7 +56,7 @@ const navigate = useNavigate()
 
     return (
         <form className={style.form}>
-            <h1 className={style.formtittle}>Create</h1>
+            <h1 className={style.formtittle}> activity</h1>
              <div className={style.formu}>
 
             <label>name</label>

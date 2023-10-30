@@ -1,6 +1,6 @@
 .conteiner{
     color:rgb(18, 17, 19);
-    border: 1px solid rgb(129, 121, 121);
+    border: 3px solid aquamarine;
     border-top:3px;
     border-radius: 15px;
     width: fit-content;
@@ -14,9 +14,10 @@
     
     display:grid;
     grid-template-columns: repeat(3,1fr);
-    margin-left: 4px;
+    
     gap: 4px ;
     flex-wrap: wrap;
+    
    
 }
 .tittle{

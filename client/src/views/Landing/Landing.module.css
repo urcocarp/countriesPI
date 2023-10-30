@@ -1,13 +1,15 @@
 .landing{
     width: 60%;
     font-size: 100px;
-    background-color: rgba(211, 210, 210, 0.26);
+    background-color: rgba(250, 247, 247, 0.26);
     font-weight: bold;
     background-position: right;
+    
 
     background-image: url('https://img.freepik.com/premium-vector/dirty-old-world-map_1102-368.jpg');
     background-position-y:center ;
     background-clip: text;
+    -webkit-text-stroke: 2px rgba(127, 255, 212, 0.452);
     
     -webkit-background-clip: text;
 }
