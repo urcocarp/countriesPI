@@ -12,6 +12,8 @@ const Home = ()=>{
     const dispatch = useDispatch()
     const actividades =useSelector(state=>state.Activity)
     const Paises=useSelector(state=>state.countries)
+
+    
     const[actualPage,setActualpage]= useState(1)
     const [countriesxpage,setCountriesxpage]=useState(10)
     const indiceultimocountrie = actualPage * countriesxpage /// 1 * 15  = 15
@@ -27,7 +29,7 @@ const Home = ()=>{
                                 
     const proximapagina =(e)=>{ actualPage<e.target.value?  setActualpage(actualPage+1): alert("no hay mas paginas")}
 
-    useEffect(()=>{
+    useEffect(()=>{   //se ejecuta antes de que se monte el componente o que inicializa la pag
         dispatch(getCountry())
         dispatch(activity())
     
@@ -70,6 +72,7 @@ const Home = ()=>{
         dispatch(getCountry())
 
     }
+ 
     
  
 

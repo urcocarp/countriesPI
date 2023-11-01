@@ -2,6 +2,7 @@ import style from './Card.module.css'
 import {Link} from 'react-router-dom'
 import { getPais } from '../../Redux/Actions'
 
+
 const Card =(props)=>{
 
   
@@ -10,6 +11,7 @@ const Card =(props)=>{
         <Link to={`/countries/${props.id}`}>
         
             <div className={style.card}>
+               
                 <img src={props.flags} className={style.flag}/>
                 <p>name:{props.name}</p>
                 <p>capital:{props.capital}</p>

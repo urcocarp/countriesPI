@@ -1,9 +1,10 @@
 import { useDispatch, useSelector } from "react-redux";
-import { useParams } from "react-router-dom";
+import { Link, useParams } from "react-router-dom";
 import { useEffect } from "react";
 import style from "./Detail.module.css"
 import { getPais } from "../../Redux/Actions";
 import { statePais } from "../../Redux/Actions";
+import {GrClose} from "react-icons/gr"
 
 
 
@@ -32,6 +33,7 @@ const Detail = () => {
     return (
         <div className={style.principal}>
          <div className={style.detail}>
+           <Link to="/home"><GrClose size={30}className={style.close} /></Link>
             <img className={style.bandera}src={countries.flags} />
             <p>pais:{countries.name}</p>
             <p>id:{countries.id}</p>

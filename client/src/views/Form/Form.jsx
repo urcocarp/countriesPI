@@ -18,23 +18,57 @@ const Form = ()=>{
  const countriesName= useSelector(state=> state.countries)
 
 
- const [form, setForm] = useState({name:"", difficulty:1, duration:"", season: ""})
+ const [form, setForm] = useState({name:"", difficulty:1, duration:"", season: "", countries:[]})
+ 
+ const [ errors, setErrors]= useState({name:"", difficulty:1, duration:"", season: ""})
  
  const handlerChange= (event)=>{
     event.preventDefault()
     
     const {value, name}= event.target
+ 
 
-   setForm({
-    ...form, 
-    [name]:value
+    
+    setForm({
+        ...form,  [name]:value})
 
-   })
+}
+const handlerSelectCountry = (event) => {
+    setForm({
+        ...form,
+        countries: [...new Set([...form.countries, event.target.value])]
+    })
+}       
+        
 
 
-   
+const temporada= ["invierno", "primavera", "otoño", "verano"]
 
- }
+const validate=(form)=>{
+    if(!form.name) 
+    return alert("debe ingresar un nombre")
+
+   if(form.name.length> 25){
+     return alert (" el nombre de la actividad no debe superar 25 caracteres")
+   }
+   if (!form.duration)
+   return alert("debe ingresar un valor")
+  if(form.duration.length > 5 || !form.duration.includes(":"))
+    return alert("franja horaria invalida")
+  if(!form.season)
+  return alert( "debe ingresar una estacion")
+  if(!temporada.includes(form.season))
+    return alert(`${form.season} no es una temporada`)
+   if(!form.countries)
+    return alert( "debe seleccionar un pais" )
+  
+   else{
+       navigate("/home")
+   }
+
+
+}
+ 
  const selectForm=(event)=>{
     event.preventDefault()
     const {value, name}= event.target
@@ -48,8 +82,11 @@ const navigate = useNavigate()
 
     event.preventDefault()
     dispatch(createActivity(form))
-    navigate("/home")
     
+    validate({...form})
+
+  
+
  }
 
 
@@ -70,13 +107,13 @@ const navigate = useNavigate()
 
              </div>
 
-            <select name="countries" onChange={handlerChange}className={style.select}>
+            <select name="countries" onChange={handlerSelectCountry}className={style.select}>
                 <option>selecciona un pais</option>
                 {countriesName.map((i,key)=>
                 <option value={i.id} >{i.name}</option>
                 )}
             </select>
-
+            {/* <button onClick={()=>console.log(form)}type="button"> ver info </button> */}
             <button type="button" onClick={button} className={style.create}>Create</button>
 
         </form>

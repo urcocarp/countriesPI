@@ -11,7 +11,7 @@ const {Country} = require("./src/db.js")
 
 
 
-conn.sync({ force: false}).then(async() => {
+conn.sync({ force: true}).then(async() => {
   try {
   const countries = await getCountries();
   await Country.bulkCreate(countries) 
