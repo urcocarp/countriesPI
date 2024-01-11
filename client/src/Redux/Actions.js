@@ -15,7 +15,7 @@ export const ACTIVIDAD= "ACTIVIDAD"
 
 export const getCountry = () => {
     return async function (dispatch) {
-        const dataCountry = await axios.get("http://localhost:3001/countries")
+        const dataCountry = await axios.get("/countries")
 
         const countries = dataCountry.data
 
@@ -28,7 +28,7 @@ export const getCountry = () => {
 export const getPais =(id) => {
     console.log(id)
     return async function (dispatch) {
-        const country = await axios.get(`http://localhost:3001/countries/${id}`);
+        const country = await axios.get(`/countries/${id}`);
         console.log(country)
         const countryId = country.data;
 

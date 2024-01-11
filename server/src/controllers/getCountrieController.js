@@ -39,7 +39,7 @@ const getAllController= async(idPais)=>{
         {
         include:{
             model:Activity,
-            // attributes:["name" ],
+            
             through:{
                 attributes:[],
             },
