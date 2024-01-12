@@ -14,7 +14,7 @@ const NavBar =()=>{
 
 const HandlerInput=(event)=>{
     const value = event.target.value
-    console.log(value)
+    // console.log(value)
     setInput(value)
     
 }

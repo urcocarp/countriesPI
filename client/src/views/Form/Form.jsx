@@ -79,11 +79,12 @@ const validate=(form)=>{
 const navigate = useNavigate()
 
  const button =(event)=>{
-
+     
+   if( validate({...form})) dispatch(createActivity(form))
+   
     event.preventDefault()
-    dispatch(createActivity(form))
+   
     
-    validate({...form})
 
   
 

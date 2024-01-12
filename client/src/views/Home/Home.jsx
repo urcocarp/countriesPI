@@ -58,7 +58,7 @@ const Home = ()=>{
         event.preventDefault()
         const orderAlafabetic = event.target.value
         dispatch(orderAZ(orderAlafabetic))
-        console.log("name")
+        // console.log("name")
 
     }
     const actPaises= (event)=>{
