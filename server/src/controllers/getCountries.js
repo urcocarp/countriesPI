@@ -19,7 +19,7 @@ const DataCountries = Countries.data.map((countrie)=>{
    
  })
 
-//  console.log(DataCountries)
+
   return DataCountries;
 }
 
