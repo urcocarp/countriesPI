@@ -13,9 +13,10 @@ export const ACTIVITY= "ACTIVITY"
 export const ACTIVIDAD= "ACTIVIDAD"
 
 
+
 export const getCountry = () => {
     return async function (dispatch) {
-        const dataCountry = await axios.get("/countries")
+        const dataCountry = await axios.get(`${baseURL}/countries`)
 
         const countries = dataCountry.data
 
@@ -28,7 +29,7 @@ export const getCountry = () => {
 export const getPais =(id) => {
     console.log(id)
     return async function (dispatch) {
-        const country = await axios.get(`/countries/${id}`);
+        const country = await axios.get(`${baseURL}/countries/${id}`);
         console.log(country)
         const countryId = country.data;
 
@@ -48,7 +49,7 @@ export const statePais = () => {
  export const getCountriesByname =(name)=>{
     console.log(name)
     return async function (dispatch){
-        const {data}=await axios.get(`/countries?nombre=${name}`)
+        const {data}=await axios.get(`${baseURL}/countries?nombre=${name}`)
         console.log(data)
         dispatch({type:FILTER, payload:data})
     
@@ -71,7 +72,7 @@ export const Poulation = (population)=>{
 export const createActivity = (activity)=>{
 
     return async function (dispatch){
-        const {data}=await axios.post(`/activities`, activity)
+        const {data}=await axios.post(`${baseURL}/activities`, activity)
         console.log(data)
         dispatch({type:CREATEACTIVITIES, payload:data})
   }
@@ -83,7 +84,7 @@ export const orderAZ=(name)=>{
 }
 export const activity =()=>{
     return async function(dispatch){
-    const {data}= await axios.get(`/activities`)
+    const {data}= await axios.get(`${baseURL}/activities`)
     console.log("activity")
      dispatch ({type:ACTIVITY , payload: data})
 }
