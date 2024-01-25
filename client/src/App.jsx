@@ -3,7 +3,7 @@ import { Route, Routes, useLocation } from 'react-router-dom'
 import NavBar from './components/NavBar/NavBar';
 import './App.css'
 import axios from 'axios';
-axios.defaults.baseURL= "https://coountrie-pi-henry.onrender.com";
+axios.defaults.baseURL= "http://localhost:3001";
 
 function App() {
   
